@@ -75,6 +75,7 @@ def wrap_agent_with_tracing(agent, trace_id):
     return agent
 
 def main_logic():
+    ## CHAT MANAGEMENT USING AUTOGEN
     df = load_data('D:/Extensa_Files/Akaike_Project/Dataset/myntra.csv') 
 
     agents = setup_agents(df)
@@ -82,7 +83,7 @@ def main_logic():
     groupchat = GroupChat(
         agents=agents,
         messages=[],
-        max_round=20,
+        max_round=2,
         speaker_selection_method="round_robin"
     )
 
@@ -100,6 +101,7 @@ def main_logic():
 
     user_proxy.initiate_chat(
         recipient=manager,
+        # ANY USER QUERY RELEATED TO THE DATA
         message="Please provide the product name with the highest price on the data you have."
     )
 

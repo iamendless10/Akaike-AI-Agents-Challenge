@@ -1,4 +1,4 @@
-# Data Query Agent System
+# CSV Agent System
 
 This project is a data query agent system that interacts with a dataset and provides insights using AI models. The system employs Langfuse for tracing and monitoring, Autogen for agent-based conversation management, and Redis for memory management. This setup is intended for production-level applications, providing performance tracking and real-time observation.
 
@@ -48,10 +48,10 @@ The system utilizes several key technologies to achieve the desired functionalit
 ### 1. **Autogen 0.4**
 - Autogen is an agent-based system for building conversational AI. It allows you to define multiple agents, each with specific tasks, and manage their interactions seamlessly.
 
-### 2. **Langfuse**
+### 2. **Langfuse (Model Production Observability & Monitoring)**
 - Langfuse is a powerful tool for monitoring and tracing the execution of AI models in production. It enables performance tracking and logging, helping you optimize your system.
 
-### 3. **Redis and LangMem**
+### 3. **Redis and LangMem (Memory Interference)**
 - Redis is an in-memory data store used for fast and persistent storage of data between agent interactions.
 - LangMem is an extension to Redis that helps manage the state of agents dynamically, ensuring that the conversation is context-aware.
 
@@ -102,15 +102,8 @@ The system uses **Langfuse** to trace the execution of agents. It tracks:
 
 These traces provide insight into agent performance, allowing for quick identification and resolution of issues.
 
-## Memory Management with LangMem and Redis
+## Memory Interference with LangMem and Redis
 
 - **LangMem** ensures that the system has access to the most recent agent states.
 - **Redis** stores the state of each agent persistently, enabling the system to recover agent data after restarts and maintain consistent state across multiple runs.
 
-## Conclusion
-
-This system provides a robust, scalable solution for querying datasets and receiving insights from AI agents. With production-level monitoring and efficient memory management, it is designed to work seamlessly in real-time systems.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
