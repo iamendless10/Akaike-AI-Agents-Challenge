@@ -12,7 +12,7 @@ The system is designed to perform the following tasks:
 - Use Redis for memory management, specifically LangMem to manage agent data and states.
 - The conversation is managed by Autogen 0.4, enabling dynamic interactions between agents.
 
-## Approach
+## Idea & Approach:
 
 The system utilizes several key technologies to achieve the desired functionality:
 
@@ -29,6 +29,9 @@ The system utilizes several key technologies to achieve the desired functionalit
 - **Langfuse** is used to monitor and trace the performance of the agents.
 - The system creates a trace for each user request and logs execution time, status, and response for better visibility into agent performance.
 - This enables efficient tracking of interactions and helps optimize the model's performance.
+- How it could look like: 👇
+- ![image](https://github.com/user-attachments/assets/3fc981c0-74b3-4b42-a60b-7711751cc360)
+
 
 ### 4. **Autogen and Group Chat Management**
 - **Autogen** is responsible for managing the conversation between the agents. It supports dynamic agent roles and controls the interaction flow.
@@ -38,6 +41,9 @@ The system utilizes several key technologies to achieve the desired functionalit
 ### 5. **Redis and LangMem for Memory Management**
 - **Redis** is utilized to store and manage data persistently between interactions.
 - **LangMem** provides in-memory storage for agent data and states, making the conversation context-aware and enabling agents to use previous interactions to influence their responses.
+- How it could look like: 👇
+- ![image](https://github.com/user-attachments/assets/438fc42a-9287-4469-82f2-d6248837fbe0)
+
 
 ### 6. **Production Monitoring and Observation**
 - With **Langfuse**, the system provides robust production monitoring and observation, ensuring that all executions are traced and performance is consistently tracked.
